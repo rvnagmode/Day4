@@ -29,6 +29,25 @@ namespace Day4
             {
                 Console.WriteLine(ex.Message);
             }
+
+
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("deligates");
+            Calculation cal = new Calculation();
+            deladd add = new deladd(cal.Add);
+            Console.WriteLine(add.Invoke(10,20));
+
+            delsub sub = new delsub(cal.Sub);
+            Console.WriteLine(sub.Invoke(20, 10));
+
+            delmulti multi = new delmulti(cal.Multi);
+            Console.WriteLine(multi.Invoke(10, 20));
+
+            deldiv div = new deldiv(cal.Div);
+            Console.WriteLine(div.Invoke(20, 10));
+
+            delstr str = new delstr(cal.Name);
+            Console.WriteLine(str.Invoke("calculator"));
         }
     }
 }
