@@ -9,6 +9,7 @@ namespace Day4
             Circle c = new Circle(12);
             c.CalculateArea();
             Console.WriteLine(c);
+            Console.WriteLine("printing area using interface : " + c.print());
 
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("area of rectangle");

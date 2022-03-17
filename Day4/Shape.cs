@@ -10,7 +10,7 @@ namespace Day4
     {
         abstract public void CalculateArea();
     }
-    public class Circle : Shape
+    public class Circle : Shape,IPrintable
     {
         private int r;
         private double area;
@@ -23,6 +23,12 @@ namespace Day4
         {
             area = 3.14 * r * r;
         }
+
+        public string print()
+        {
+            return "area of circle = " + area;
+        }
+
         public override string ToString()
         {
             return "area of circle = " + area;
