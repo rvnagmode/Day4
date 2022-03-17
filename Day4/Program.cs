@@ -16,6 +16,19 @@ namespace Day4
             Rectangle r = new Rectangle(10,20);
             r.CalculateArea();
             Console.WriteLine(r);
+
+
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("exception");
+            User u = new User();
+            try
+            {
+                Console.WriteLine("enterd name is = " + u.Acceptname(null));
+            }
+            catch(NameException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
